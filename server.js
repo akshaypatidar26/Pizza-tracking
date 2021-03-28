@@ -6,6 +6,7 @@ const path = require('path')
 
 const PORT = process.env.PORT || 3300
 
+app.use(express.static('public'))
 app.get('/',(req,res)=>{
     res.render('home')
 
@@ -18,4 +19,4 @@ app.set('view engine', 'ejs')
 
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`)
-})
+}) 
